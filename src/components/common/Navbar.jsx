@@ -21,7 +21,7 @@ const Navbar = ({ hasHero }) => {
   }, []);
 
   const isTransparent = hasHero && !isScrolled;
-  const navbarClasses = `fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isTransparent ? "bg-transparent text-white" : "bg-white text-black shadow-md"
+  const navbarClasses = `fixed top-0 left-0 w-full z-50 transition-all duration-300 ${isTransparent ? "bg-transparent text-white" : "bg-white text-black"
     }`;
 
   return (
@@ -96,7 +96,7 @@ const Navbar = ({ hasHero }) => {
             </div>
 
             {/* Other Links */}
-            {["Inventory", "Events", "Blog", "Reviews"].map((item) => (
+            {["Inventory", "Blog", "Reviews"].map((item) => (
               <Link key={item} to={`/${item.toLowerCase()}`} className="hover:underline transition-all duration-200">
                 {item}
               </Link>

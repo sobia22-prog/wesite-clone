@@ -1,27 +1,22 @@
 import Footer from "../components/common/Footer";
 import Navbar from "../components/common/Navbar";
-import CamperVans from "../components/sections/CamparVans";
 import ExperienceNoovoSection from "../components/sections/ExperienceSection";
 import FAQSection from "../components/sections/FAQItem";
 import GridSection from "../components/sections/GridSection";
-import HeroCarousel from "../components/sections/HeroCarousel";
-import HeroSection from "../components/sections/HeroSection";
+import ReviewHero from "../components/sections/ReviewsHero";
+import SubSection from "../components/sections/SubscribeSection";
 import TestimonialSection from "../components/sections/Testimonial";
+import VideoReviews from "../components/sections/VideoReviews";
 
 
-const Home = () => {
+const Reviews = () => {
   return (
     <div>
       {/* Pass hasHero as true for transparent navbar */}
-      <Navbar hasHero={true} />
-      <HeroCarousel />
-      <CamperVans />
-      <HeroSection />
-      <GridSection />
-      <div className="pt-10 pl-10 pb-10 pr-5">
-        <img src="assets/images/home.png"></img>
-      </div>
-      <TestimonialSection />
+      <Navbar hasHero={false} />
+      <ReviewHero />
+      <VideoReviews />
+      <SubSection />
       <ExperienceNoovoSection />
       <FAQSection />
       <Footer />
@@ -29,4 +24,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default Reviews;
